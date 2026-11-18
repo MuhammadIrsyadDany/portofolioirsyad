@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yassin Farag — Brand and Interface Designer | Alter</title>
+  <meta name="description" content="Independent brand and interface designer in Copenhagen. Identities, websites and wayfinding for products that are hard to explain.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Google Fonts: Big Shoulders Display & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main Navigation">
+        <a href="#hero" class="brand-link">
+          <span class="status-beacon" title="Status: Online & Available"></span>
+          <span>Yassin Farag</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#projects" class="nav-link">Work</a></li>
+          <li><a href="#about" class="nav-link" data-open-modal="modal-about">About</a></li>
+          <li><a href="#contact" class="nav-link" data-open-modal="modal-contact">Contact</a></li>
+        </ul>
+
+        <a href="#contact" class="nav-cta" data-open-modal="modal-contact">
+          <span class="nav-cta-prefix">//</span>
+          <span>Start a project</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="modal-overlay" id="mobile-drawer">
+    <div class="modal-panel" style="max-width: 380px;">
+      <button class="modal-close-btn" aria-label="Close menu">✕</button>
+      <div style="margin-top: 4rem; display: flex; flex-direction: column; gap: 2rem;">
+        <span class="mono-tag">// NAVIGATION ARCHIVE</span>
+        <a href="#projects" class="drawer-link" style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800;">WORK</a>
+        <a href="#about" class="drawer-link" data-open-modal="modal-about" style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800;">ABOUT</a>
+        <a href="#contact" class="drawer-link" data-open-modal="modal-contact" style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800;">CONTACT</a>
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
+          <p class="mono-tag" style="margin-bottom: 0.5rem;">DIRECT COMM</p>
+          <a href="#" data-copy-email="hello@example.com" style="color: var(--accent-orange); font-family: var(--font-mono); font-size: 0.875rem;">hello@example.com ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: SUIT UP TACTICAL STAGE
+         ========================================================================== -->
+    <section class="hero-stage" id="hero">
+      <!-- Three.js Canvas Container -->
+      <div class="hero-canvas-wrap">
+        <canvas id="suitup-canvas"></canvas>
+      </div>
+
+      <!-- Fallback Silhouette image -->
+      <img src="assets/images/hero-fallback.png" alt="Yassin Farag Silhouette" class="hero-fallback-img">
+
+      <!-- HUD Viewfinder Overlay -->
+      <div class="hud-viewfinder">
+        <!-- 4 Crosshair Corners -->
+        <div class="hud-corner tl"></div>
+        <div class="hud-corner tr"></div>
+        <div class="hud-corner bl"></div>
+        <div class="hud-corner br"></div>
+
+        <!-- Top Row -->
+        <div class="hud-top-row">
+          <div class="hud-file" id="hud-file">
+            <span class="hud-file-dot"></span>
+            <span class="hud-file-label" id="hud-file-label">FILE 001 / CIVILIAN</span>
+          </div>
+          <div class="hud-coords">
+            <span>55.676° N 12.568° E</span>
+          </div>
+        </div>
+
+        <!-- Center Giant Typography -->
+        <div class="hero-content">
+          <div class="hero-names-wrap">
+            <div class="hero-row">
+              <h1 class="hero-title-text" id="hero-name-1" data-civilian="YASSIN" data-suited="ALTER">YASSIN</h1>
+            </div>
+            <div class="hero-row">
+              <span class="hero-title-text" id="hero-name-2" data-civilian="FARAG" data-suited="EGO">FARAG</span>
+            </div>
+          </div>
+          <p class="hero-subtext">
+            Independent designer in Copenhagen. By day: identities, websites and wayfinding. By deadline: something else.
+          </p>
+        </div>
+
+        <!-- Bottom HUD Controls -->
+        <div class="hud-bottom-row">
+          <!-- Left: Suit Integrity Meter -->
+          <div class="hud-integrity" id="hud-integrity">
+            <div class="hud-integrity-label">
+              <span>Suit integrity</span>
+              <span class="hud-integrity-val" id="hud-percent">000%</span>
+            </div>
+            <div class="hud-meter-track">
+              <div class="hud-meter-fill" id="hud-meter-fill"></div>
+            </div>
+          </div>
+
+          <!-- Center: Scroll Hint -->
+          <div class="hud-hint-wrap" id="hud-hint" title="Scroll down to suit up">
+            <span class="hud-hint-text">Scroll to suit up</span>
+            <div class="hud-pulse-line"></div>
+          </div>
+
+          <!-- Right: Civilian/Suited Status -->
+          <div class="hud-status" id="hud-status">
+            <span class="hud-status-label">Status</span>
+            <span class="hud-status-val" id="hud-status-val">Civilian</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ORIGIN STORY SECTION
+         ========================================================================== -->
+    <section class="section" id="origin">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title"><span>//</span> Origin story</h2>
+          <span class="section-count">01 / Profile</span>
+        </div>
+
+        <p class="origin-statement" id="origin-statement-text">
+          Ten years in studios taught me one rule: if a brand needs a paragraph to explain itself, <em>the design isn’t finished</em>. So I work like a specialist on call. One founder, one product, no committee, from the first sketch to the files that ship.
+        </p>
+
+        <!-- Interactive Timeline Stops -->
+        <div class="timeline-route">
+          <div class="timeline-track">
+            <div class="timeline-progress-bar" id="timeline-progress-bar"></div>
+          </div>
+          <div class="timeline-stops">
+            <div class="timeline-stop" data-step="0">
+              <span class="stop-marker"></span>
+              <h3 class="stop-city">Cairo</h3>
+              <p class="stop-detail">Foundations & Typography</p>
+            </div>
+            <div class="timeline-stop" data-step="1">
+              <span class="stop-marker"></span>
+              <h3 class="stop-city">Amsterdam</h3>
+              <p class="stop-detail">Design Studios & Scale</p>
+            </div>
+            <div class="timeline-stop" data-step="2">
+              <span class="stop-marker"></span>
+              <h3 class="stop-city">Copenhagen</h3>
+              <p class="stop-detail">Wayfinding & Architecture</p>
+            </div>
+            <div class="timeline-stop active" data-step="3">
+              <span class="stop-marker"></span>
+              <h3 class="stop-city">Independent</h3>
+              <p class="stop-detail">Specialist On Call</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         POWER PROFILE SECTION
+         ========================================================================== -->
+    <section class="section" id="powers">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title"><span>//</span> Power profile</h2>
+          <span class="section-count">04 abilities</span>
+        </div>
+
+        <div class="powers-grid">
+          <!-- Power Cards List -->
+          <div class="powers-list">
+            <div class="power-card active" data-power="pwr-01">
+              <div class="power-meta">
+                <span class="power-code">PWR-01</span>
+                <span class="power-badge">Active</span>
+              </div>
+              <h3 class="power-name">Identity systems</h3>
+            </div>
+
+            <div class="power-card" data-power="pwr-02">
+              <div class="power-meta">
+                <span class="power-code">PWR-02</span>
+                <span class="power-badge">Standby</span>
+              </div>
+              <h3 class="power-name">Websites</h3>
+            </div>
+
+            <div class="power-card" data-power="pwr-03">
+              <div class="power-meta">
+                <span class="power-code">PWR-03</span>
+                <span class="power-badge">Standby</span>
+              </div>
+              <h3 class="power-name">Wayfinding</h3>
+            </div>
+
+            <div class="power-card" data-power="pwr-04">
+              <div class="power-meta">
+                <span class="power-code">PWR-04</span>
+                <span class="power-badge">Standby</span>
+              </div>
+              <h3 class="power-name">Art direction</h3>
+            </div>
+          </div>
+
+          <!-- Radar Scanner & Readout Panel -->
+          <div class="power-radar-panel">
+            <div class="radar-screen-wrap">
+              <div class="radar-circle c1"></div>
+              <div class="radar-circle c2"></div>
+              <div class="radar-circle c3"></div>
+              <div class="radar-crosshair-h"></div>
+              <div class="radar-crosshair-v"></div>
+              <div class="radar-sweep"></div>
+              <div class="radar-target-dot" id="radar-target-dot" style="top: 35%; left: 60%;"></div>
+            </div>
+
+            <div class="radar-readout">
+              <div class="readout-header">
+                <span class="readout-code" id="readout-power-code">Scan / PWR-01</span>
+                <span class="readout-live-tag">Live</span>
+              </div>
+              <p class="readout-text" id="readout-power-desc">
+                Marks, type, colour and the rules that keep them consistent long after I leave the room. Complete corporate identities and design systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MISSION FILES SECTION (PROJECTS)
+         ========================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title"><span>//</span> Mission files</h2>
+          <span class="section-count">07 records</span>
+        </div>
+
+        <div class="projects-header-info">
+          <span>CLASSIFIED ARCHIVE</span>
+          <span>Hover a file to declassify ↗</span>
+        </div>
+
+        <div class="projects-list">
+          <!-- Project 01 -->
+          <div class="project-row" data-project="halden-acoustics">
+            <span class="project-file-num">File 01</span>
+            <h3 class="project-name">Halden Acoustics</h3>
+            <span class="project-discipline">Identity, Packaging</span>
+            <span class="project-client">Halden, Oslo</span>
+            <span class="project-year">2026</span>
+            <span class="project-arrow">↗</span>
+          </div>
+
+          <!-- Project 02 -->
+          <div class="project-row" data-project="parallel-archive">
+            <span class="project-file-num">File 02</span>
+            <h3 class="project-name">Parallel Archive</h3>
+            <span class="project-discipline">Website, Art direction</span>
+            <span class="project-client">Parallel, Rotterdam</span>
+            <span class="project-year">2025</span>
+            <span class="project-arrow">↗</span>
+          </div>
+
+          <!-- Project 03 -->
+          <div class="project-row" data-project="nordvik-ceramics">
+            <span class="project-file-num">File 03</span>
+            <h3 class="project-name">Nordvik Ceramics</h3>
+            <span class="project-discipline">Identity, E-commerce</span>
+            <span class="project-client">Nordvik, Bergen</span>
+            <span class="project-year">2025</span>
+            <span class="project-arrow">↗</span>
+          </div>
+
+          <!-- Project 04 -->
+          <div class="project-row" data-project="lumen-line">
+            <span class="project-file-num">File 04</span>
+            <h3 class="project-name">Lumen Line</h3>
+            <span class="project-discipline">Wayfinding, Signage</span>
+            <span class="project-client">Aarhus Light Rail</span>
+            <span class="project-year">2024</span>
+            <span class="project-arrow">↗</span>
+          </div>
+
+          <!-- Project 05 -->
+          <div class="project-row" data-project="osk-audio">
+            <span class="project-file-num">File 05</span>
+            <h3 class="project-name">Osk Audio</h3>
+            <span class="project-discipline">Identity, Launch site</span>
+            <span class="project-client">Osk, Copenhagen</span>
+            <span class="project-year">2024</span>
+            <span class="project-arrow">↗</span>
+          </div>
+
+          <!-- Project 06 -->
+          <div class="project-row" data-project="mork-roasters">
+            <span class="project-file-num">File 06</span>
+            <h3 class="project-name">Mørk Roasters</h3>
+            <span class="project-discipline">Identity, Packaging</span>
+            <span class="project-client">Mørk, Trondheim</span>
+            <span class="project-year">2023</span>
+            <span class="project-arrow">↗</span>
+          </div>
+
+          <!-- Project 07 -->
+          <div class="project-row" data-project="kunsthal-nord">
+            <span class="project-file-num">File 07</span>
+            <h3 class="project-name">Kunsthal Nord</h3>
+            <span class="project-discipline">Wayfinding, Signage</span>
+            <span class="project-client">Kunsthal Nord, Aalborg</span>
+            <span class="project-year">2023</span>
+            <span class="project-arrow">↗</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Image Preview Element -->
+      <div class="project-floating-preview" id="project-floating-preview">
+        <img src="" alt="Project Preview">
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SIGNAL FOOTER SECTION
+         ========================================================================== -->
+    <footer class="signal-footer" id="contact">
+      <div class="container">
+        <!-- Beacon Bar -->
+        <div class="signal-beacon-bar">
+          <span class="signal-dot"></span>
+          <span>Signal // Available Q1 2027</span>
+        </div>
+
+        <!-- Giant Headline -->
+        <div class="signal-headline-wrap">
+          <h2 class="signal-headline" data-open-modal="modal-contact">
+            SEND THE SIGNAL <span>↗</span>
+          </h2>
+        </div>
+
+        <div class="signal-content-grid">
+          <div>
+            <p class="signal-lede">
+              Got a product that’s hard to explain? One email and I’m on it.
+            </p>
+            <button class="signal-email-btn" data-copy-email="hello@example.com">
+              <span>hello@example.com</span>
+              <span style="color: var(--accent-orange);">[COPY]</span>
+            </button>
+          </div>
+
+          <!-- Direct Channels -->
+          <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+              <span>LinkedIn</span>
+              <span>↗</span>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link">
+              <span>Instagram</span>
+              <span>↗</span>
+            </a>
+            <a href="https://are.na" target="_blank" rel="noopener noreferrer" class="social-link">
+              <span>Are.na</span>
+              <span>↗</span>
+            </a>
+            <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-link">
+              <span>Dribbble</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom Metadata -->
+        <div class="signal-bottom">
+          <span>© 2026 Yassin Farag. All mission files confidential.</span>
+          <span>55.676° N 12.568° E // COPENHAGEN</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ==========================================================================
+       CASE STUDY DETAIL MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-case-study">
+    <div class="modal-panel">
+      <button class="modal-close-btn" aria-label="Close case file">✕</button>
+
+      <div style="margin-bottom: 2rem;">
+        <span class="mono-tag" id="cs-file-tag">Case file 01</span>
+        <h2 id="cs-title" style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 800; text-transform: uppercase; margin-top: 0.5rem; line-height: 1;">
+          Halden Acoustics
+        </h2>
+        <p id="cs-discipline" style="color: var(--accent-orange); font-family: var(--font-mono); font-size: 0.875rem; margin-top: 0.5rem;">
+          Identity, Packaging
+        </p>
+      </div>
+
+      <div style="width: 100%; height: 320px; border-radius: 4px; overflow: hidden; margin-bottom: 2.5rem; border: 1px solid var(--border-subtle);">
+        <img id="cs-image" src="" alt="Case Study Cover" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+
+      <!-- Metadata Grid -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); margin-bottom: 2.5rem;">
+        <div>
+          <span class="mono-tag" style="display: block; font-size: 0.75rem;">Client</span>
+          <span id="cs-client" style="font-weight: 600; font-size: 0.9375rem;">Halden, Oslo</span>
+        </div>
+        <div>
+          <span class="mono-tag" style="display: block; font-size: 0.75rem;">Year</span>
+          <span id="cs-year" style="font-weight: 600; font-size: 0.9375rem;">2026</span>
+        </div>
+        <div>
+          <span class="mono-tag" style="display: block; font-size: 0.75rem;">Role</span>
+          <span id="cs-role" style="font-weight: 600; font-size: 0.9375rem;">Lead Brand</span>
+        </div>
+        <div>
+          <span class="mono-tag" style="display: block; font-size: 0.75rem;">Duration</span>
+          <span id="cs-duration" style="font-weight: 600; font-size: 0.9375rem;">14 weeks</span>
+        </div>
+      </div>
+
+      <!-- Briefing & Approach -->
+      <div style="display: flex; flex-direction: column; gap: 2rem;">
+        <div>
+          <span class="mono-tag">// Briefing</span>
+          <p id="cs-brief" style="font-size: 1.0625rem; color: var(--text-secondary); line-height: 1.6; margin-top: 0.5rem;"></p>
+        </div>
+
+        <div>
+          <span class="mono-tag">// Approach</span>
+          <p id="cs-approach" style="font-size: 1.0625rem; color: var(--text-secondary); line-height: 1.6; margin-top: 0.5rem;"></p>
+        </div>
+
+        <div style="background: var(--bg-card); padding: 1.75rem; border-left: 3px solid var(--accent-orange); border-radius: 0 4px 4px 0;">
+          <span class="mono-tag" style="color: var(--accent-orange);">// Debrief / Outcome</span>
+          <p id="cs-debrief" style="font-size: 1.125rem; color: var(--text-primary); font-weight: 600; line-height: 1.5; margin-top: 0.5rem;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       ABOUT PERSONNEL FILE MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-about">
+    <div class="modal-panel">
+      <button class="modal-close-btn" aria-label="Close personnel file">✕</button>
+
+      <span class="mono-tag" style="color: var(--accent-cyan);">// PERSONNEL FILE // CLEARANCE: PUBLIC</span>
+      <h2 style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 800; text-transform: uppercase; margin: 0.5rem 0 2rem 0; line-height: 1;">
+        Yassin Farag
+      </h2>
+
+      <!-- Interactive Alter Ego Reveal Slider -->
+      <div style="margin-bottom: 2.5rem;">
+        <div id="alter-ego-compare" style="position: relative; width: 100%; height: 380px; border-radius: 4px; overflow: hidden; border: 1px solid var(--border-medium); cursor: ew-resize; user-select: none;">
+          <!-- Civilian Base Layer -->
+          <img src="assets/images/portrait-civilian.webp" alt="Civilian Portrait" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+
+          <!-- Suited Top Layer (Clipped) -->
+          <div id="compare-suited-layer" style="position: absolute; inset: 0; width: 100%; height: 100%; clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+            <img src="assets/images/portrait-suited.jpg" alt="Suited Alter Ego Portrait" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+
+          <!-- Draggable Divider Line -->
+          <div id="compare-handle" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: var(--accent-orange); box-shadow: 0 0 10px var(--accent-orange); transform: translateX(-50%); pointer-events: none;">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 24px; height: 24px; background: var(--bg-base); border: 2px solid var(--accent-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--accent-orange);">
+              ◀▶
+            </div>
+          </div>
+        </div>
+        <p class="mono-tag" style="text-align: center; margin-top: 0.75rem; font-size: 0.75rem;">
+          TOUCH & DRAG TO REVEAL THE ALTER EGO
+        </p>
+      </div>
+
+      <!-- Bio / Dossier -->
+      <div style="display: flex; flex-direction: column; gap: 1.5rem; color: var(--text-secondary); line-height: 1.6; font-size: 1rem; margin-bottom: 3rem;">
+        <p>
+          I grew up in Cairo, studied graphic design there, and spent eight years in studios in Cairo, Amsterdam and Copenhagen before going independent in 2022.
+        </p>
+        <p>
+          Most of my clients are small teams with one good product and no time to explain it. I work with them directly, usually alone, sometimes with a photographer, developer or copywriter I trust.
+        </p>
+        <p>
+          Outside client work I collect bus timetables and badly translated signs. That is where most of my opinions about wayfinding come from.
+        </p>
+      </div>
+
+      <!-- Career Timeline -->
+      <div style="border-top: 1px solid var(--border-subtle); padding-top: 2rem; margin-bottom: 3rem;">
+        <span class="mono-tag">// Career Record</span>
+        <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
+            <div>
+              <h4 style="font-weight: 700; color: var(--text-primary);">Independent Designer</h4>
+              <p style="font-size: 0.875rem; color: var(--text-tertiary);">Self-employed, Copenhagen</p>
+            </div>
+            <span class="mono-tag" style="color: var(--accent-orange);">2022–NOW</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
+            <div>
+              <h4 style="font-weight: 700; color: var(--text-primary);">Senior Brand Designer</h4>
+              <p style="font-size: 0.875rem; color: var(--text-tertiary);">Studio Kvist, Copenhagen</p>
+            </div>
+            <span class="mono-tag">2019–2022</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
+            <div>
+              <h4 style="font-weight: 700; color: var(--text-primary);">Brand & Interface Designer</h4>
+              <p style="font-size: 0.875rem; color: var(--text-tertiary);">Mono Haus, Amsterdam</p>
+            </div>
+            <span class="mono-tag">2016–2019</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <div>
+              <h4 style="font-weight: 700; color: var(--text-primary);">Junior Designer</h4>
+              <p style="font-size: 0.875rem; color: var(--text-tertiary);">Atelier Sahn, Cairo</p>
+            </div>
+            <span class="mono-tag">2014–2016</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CONTACT MISSION TERMINAL MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-contact">
+    <div class="modal-panel">
+      <button class="modal-close-btn" aria-label="Close terminal">✕</button>
+
+      <span class="mono-tag" style="color: var(--accent-orange);">// OPEN MISSION BRIEFING // TX-01</span>
+      <h2 style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 800; text-transform: uppercase; margin: 0.5rem 0 1rem 0; line-height: 1;">
+        Open a file
+      </h2>
+      <p style="color: var(--text-secondary); font-size: 0.9375rem; margin-bottom: 2rem;">
+        Tell me about the product that’s hard to explain. A few lines are enough. Every brief gets a personal reply within 2 working days.
+      </p>
+
+      <form id="mission-contact-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div>
+          <label class="mono-tag" style="display: block; margin-bottom: 0.5rem;">01 / YOUR NAME *</label>
+          <input type="text" required placeholder="Alex Mercer" style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem;">
+        </div>
+
+        <div>
+          <label class="mono-tag" style="display: block; margin-bottom: 0.5rem;">02 / DIRECT EMAIL *</label>
+          <input type="email" required placeholder="alex@company.com" style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem;">
+        </div>
+
+        <div>
+          <label class="mono-tag" style="display: block; margin-bottom: 0.5rem;">03 / COMPANY OR PROJECT</label>
+          <input type="text" placeholder="Acoustic Labs Inc." style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem;">
+        </div>
+
+        <div>
+          <label class="mono-tag" style="display: block; margin-bottom: 0.5rem;">04 / WHAT NEEDS SOLVING</label>
+          <select style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem;">
+            <option value="identity">Complete Identity System</option>
+            <option value="website">Custom Website & Digital Experience</option>
+            <option value="wayfinding">Wayfinding & Spatial Signage</option>
+            <option value="art-direction">Art Direction & Launch Campaign</option>
+            <option value="other">Multiple / Full Retainer</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="mono-tag" style="display: block; margin-bottom: 0.5rem;">05 / THE BRIEF *</label>
+          <textarea rows="4" required placeholder="Describe your product, timeline, and current problem..." style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem; resize: vertical;"></textarea>
+        </div>
+
+        <button type="submit" style="padding: 1.125rem; background: var(--accent-orange); color: #fff; font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 4px; transition: background 0.2s ease; margin-top: 1rem;">
+          SEND THE SIGNAL [TX-01]
+        </button>
+
+        <div id="form-status-notice" class="mono-tag" style="text-align: center; margin-top: 0.5rem; font-size: 0.75rem;">
+          CHANNEL ENCRYPTED // 256-BIT DISPATCH
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/three.min.js"></script>
+  <script src="assets/js/hero-shader.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
