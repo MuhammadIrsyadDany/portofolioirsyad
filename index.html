@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yassin Farag — Brand and Interface Designer | Alter</title>
-  <meta name="description" content="Independent brand and interface designer in Copenhagen. Identities, websites and wayfinding for products that are hard to explain.">
+  <title>Muhammad Irsyad Dany — Web Developer & Full-Stack Developer</title>
+  <meta name="description" content="Muhammad Irsyad Dany — Web Developer & Full-Stack Developer based in Malang, Indonesia. Building digital experiences through thoughtful design, clean code, and functional solutions.">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muhammad Irsyad Dany — Web Developer & Full-Stack Developer">
+  <meta property="og:description" content="Building digital experiences through thoughtful design, clean code, and functional solutions.">
+  <meta property="og:url" content="https://irsyaddany-portfolio.pages.dev/">
 
   <!-- Google Fonts: Big Shoulders Display & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,12 +30,13 @@
     <div class="container">
       <nav class="nav-inner" aria-label="Main Navigation">
         <a href="#hero" class="brand-link">
-          <span class="status-beacon" title="Status: Online & Available"></span>
-          <span>Yassin Farag</span>
+          <span class="status-beacon" title="Status: Open to Opportunities"></span>
+          <span>Irsyad Dany</span>
         </a>
 
         <ul class="nav-links">
           <li><a href="#projects" class="nav-link">Work</a></li>
+          <li><a href="#powers" class="nav-link">Skills</a></li>
           <li><a href="#about" class="nav-link" data-open-modal="modal-about">About</a></li>
           <li><a href="#contact" class="nav-link" data-open-modal="modal-contact">Contact</a></li>
         </ul>
@@ -55,11 +62,13 @@
       <div style="margin-top: 4rem; display: flex; flex-direction: column; gap: 2rem;">
         <span class="mono-tag">// NAVIGATION ARCHIVE</span>
         <a href="#projects" class="drawer-link" style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800;">WORK</a>
+        <a href="#powers" class="drawer-link" style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800;">SKILLS</a>
         <a href="#about" class="drawer-link" data-open-modal="modal-about" style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800;">ABOUT</a>
         <a href="#contact" class="drawer-link" data-open-modal="modal-contact" style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800;">CONTACT</a>
         <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
           <p class="mono-tag" style="margin-bottom: 0.5rem;">DIRECT COMM</p>
-          <a href="#" data-copy-email="hello@example.com" style="color: var(--accent-orange); font-family: var(--font-mono); font-size: 0.875rem;">hello@example.com ↗</a>
+          <a href="https://www.linkedin.com/in/muhammadirsyaddany/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-orange); font-family: var(--font-mono); font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">LinkedIn // muhammadirsyaddany ↗</a>
+          <a href="https://irsyaddany-portfolio.pages.dev/" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.875rem;">irsyaddany-portfolio.pages.dev ↗</a>
         </div>
       </div>
     </div>
@@ -67,7 +76,7 @@
 
   <main>
     <!-- ==========================================================================
-         HERO SECTION: SUIT UP TACTICAL STAGE
+         HERO SECTION: SUIT UP STAGE (EXACT FRAMER MATCH)
          ========================================================================== -->
     <section class="hero-stage" id="hero">
       <!-- Three.js Canvas Container -->
@@ -76,7 +85,22 @@
       </div>
 
       <!-- Fallback Silhouette image -->
-      <img src="assets/images/hero-fallback.png" alt="Yassin Farag Silhouette" class="hero-fallback-img">
+      <img src="assets/images/hero-fallback.png" alt="Muhammad Irsyad Dany Silhouette" class="hero-fallback-img">
+
+      <!-- Giant Typography Placed on Left and Right Behind Character -->
+      <div class="hero-names-backdrop">
+        <div class="hero-name-left-wrap">
+          <h1 class="hero-title-text name-1" id="hero-name-1" data-civilian="IRSYAD" data-suited="ALTER">IRSYAD</h1>
+        </div>
+        <div class="hero-name-right-wrap">
+          <span class="hero-title-text name-2" id="hero-name-2" data-civilian="DANY" data-suited="EGO">DANY</span>
+        </div>
+      </div>
+
+      <!-- Center Subtext on Bottom Left -->
+      <p class="hero-center-subtext">
+        Web Developer & Full-Stack Developer in Malang, Indonesia. Building digital experiences through thoughtful design, clean code, and functional solutions.
+      </p>
 
       <!-- HUD Viewfinder Overlay -->
       <div class="hud-viewfinder">
@@ -93,23 +117,8 @@
             <span class="hud-file-label" id="hud-file-label">FILE 001 / CIVILIAN</span>
           </div>
           <div class="hud-coords">
-            <span>55.676° N 12.568° E</span>
+            <span>07.984° S 112.621° E // MALANG, ID</span>
           </div>
-        </div>
-
-        <!-- Center Giant Typography -->
-        <div class="hero-content">
-          <div class="hero-names-wrap">
-            <div class="hero-row">
-              <h1 class="hero-title-text" id="hero-name-1" data-civilian="YASSIN" data-suited="ALTER">YASSIN</h1>
-            </div>
-            <div class="hero-row">
-              <span class="hero-title-text" id="hero-name-2" data-civilian="FARAG" data-suited="EGO">FARAG</span>
-            </div>
-          </div>
-          <p class="hero-subtext">
-            Independent designer in Copenhagen. By day: identities, websites and wayfinding. By deadline: something else.
-          </p>
         </div>
 
         <!-- Bottom HUD Controls -->
@@ -141,44 +150,56 @@
     </section>
 
     <!-- ==========================================================================
-         ORIGIN STORY SECTION
+         ORIGIN STORY SECTION (EXACT FRAMER MATCH)
          ========================================================================== -->
-    <section class="section" id="origin">
+    <section class="origin-section" id="origin">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title"><span>//</span> Origin story</h2>
-          <span class="section-count">01 / Profile</span>
+        <div class="origin-header">
+          <div class="origin-header-title">
+            <span>//</span> Origin story
+          </div>
+          <div class="origin-counter" id="origin-counter">
+            000%
+          </div>
         </div>
 
         <p class="origin-statement" id="origin-statement-text">
-          Ten years in studios taught me one rule: if a brand needs a paragraph to explain itself, <em>the design isn’t finished</em>. So I work like a specialist on call. One founder, one product, no committee, from the first sketch to the files that ship.
+          I enjoy transforming ideas and complex requirements into <span class="highlight">functional, intuitive, and well-structured digital experiences</span> through thoughtful development and problem-solving.
         </p>
 
         <!-- Interactive Timeline Stops -->
         <div class="timeline-route">
           <div class="timeline-track">
-            <div class="timeline-progress-bar" id="timeline-progress-bar"></div>
+            <div class="timeline-progress-fill" id="timeline-progress-fill"></div>
           </div>
           <div class="timeline-stops">
-            <div class="timeline-stop" data-step="0">
-              <span class="stop-marker"></span>
-              <h3 class="stop-city">Cairo</h3>
-              <p class="stop-detail">Foundations & Typography</p>
+            <div class="timeline-stop active" data-step="0">
+              <div class="stop-marker">
+                <div class="stop-marker-dot"></div>
+              </div>
+              <h3 class="stop-city">Malang</h3>
+              <p class="stop-detail">Foundations & Growth</p>
             </div>
             <div class="timeline-stop" data-step="1">
-              <span class="stop-marker"></span>
-              <h3 class="stop-city">Amsterdam</h3>
-              <p class="stop-detail">Design Studios & Scale</p>
+              <div class="stop-marker">
+                <div class="stop-marker-dot"></div>
+              </div>
+              <h3 class="stop-city">Polinema</h3>
+              <p class="stop-detail">Informatics Engineering</p>
             </div>
             <div class="timeline-stop" data-step="2">
-              <span class="stop-marker"></span>
-              <h3 class="stop-city">Copenhagen</h3>
-              <p class="stop-detail">Wayfinding & Architecture</p>
+              <div class="stop-marker">
+                <div class="stop-marker-dot"></div>
+              </div>
+              <h3 class="stop-city">UTERO</h3>
+              <p class="stop-detail">Mobile & Front-End Intern</p>
             </div>
-            <div class="timeline-stop active" data-step="3">
-              <span class="stop-marker"></span>
+            <div class="timeline-stop" data-step="3">
+              <div class="stop-marker">
+                <div class="stop-marker-dot"></div>
+              </div>
               <h3 class="stop-city">Independent</h3>
-              <p class="stop-detail">Specialist On Call</p>
+              <p class="stop-detail">Full-Stack Developer</p>
             </div>
           </div>
         </div>
@@ -186,70 +207,109 @@
     </section>
 
     <!-- ==========================================================================
-         POWER PROFILE SECTION
+         POWER PROFILE SECTION (SKILLS + SPIDER CHART RADAR)
          ========================================================================== -->
-    <section class="section" id="powers">
+    <section class="powers-section" id="powers">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title"><span>//</span> Power profile</h2>
-          <span class="section-count">04 abilities</span>
+        <div class="powers-header">
+          <div class="powers-header-title">
+            <span>//</span> Power profile
+          </div>
+          <div class="mono-tag">04 core abilities</div>
         </div>
 
         <div class="powers-grid">
-          <!-- Power Cards List -->
+          <!-- Power Cards Rows -->
           <div class="powers-list">
-            <div class="power-card active" data-power="pwr-01">
-              <div class="power-meta">
-                <span class="power-code">PWR-01</span>
-                <span class="power-badge">Active</span>
+            <div class="power-row active" data-power="pwr-01">
+              <div class="power-row-meta">
+                <span class="power-row-code">PWR-01</span>
+                <span class="power-row-status">Active</span>
               </div>
-              <h3 class="power-name">Identity systems</h3>
+              <h3 class="power-row-name">Web Development</h3>
             </div>
 
-            <div class="power-card" data-power="pwr-02">
-              <div class="power-meta">
-                <span class="power-code">PWR-02</span>
-                <span class="power-badge">Standby</span>
+            <div class="power-row" data-power="pwr-02">
+              <div class="power-row-meta">
+                <span class="power-row-code">PWR-02</span>
+                <span class="power-row-status">Standby</span>
               </div>
-              <h3 class="power-name">Websites</h3>
+              <h3 class="power-row-name">Backend & Database</h3>
             </div>
 
-            <div class="power-card" data-power="pwr-03">
-              <div class="power-meta">
-                <span class="power-code">PWR-03</span>
-                <span class="power-badge">Standby</span>
+            <div class="power-row" data-power="pwr-03">
+              <div class="power-row-meta">
+                <span class="power-row-code">PWR-03</span>
+                <span class="power-row-status">Standby</span>
               </div>
-              <h3 class="power-name">Wayfinding</h3>
+              <h3 class="power-row-name">UI/UX & Interface</h3>
             </div>
 
-            <div class="power-card" data-power="pwr-04">
-              <div class="power-meta">
-                <span class="power-code">PWR-04</span>
-                <span class="power-badge">Standby</span>
+            <div class="power-row" data-power="pwr-04">
+              <div class="power-row-meta">
+                <span class="power-row-code">PWR-04</span>
+                <span class="power-row-status">Standby</span>
               </div>
-              <h3 class="power-name">Art direction</h3>
+              <h3 class="power-row-name">System Analysis</h3>
             </div>
           </div>
 
           <!-- Radar Scanner & Readout Panel -->
           <div class="power-radar-panel">
-            <div class="radar-screen-wrap">
-              <div class="radar-circle c1"></div>
-              <div class="radar-circle c2"></div>
-              <div class="radar-circle c3"></div>
-              <div class="radar-crosshair-h"></div>
-              <div class="radar-crosshair-v"></div>
-              <div class="radar-sweep"></div>
-              <div class="radar-target-dot" id="radar-target-dot" style="top: 35%; left: 60%;"></div>
+            <div class="radar-top-bar">
+              <span class="radar-code-label" id="radar-code-label">Scan / PWR-01</span>
+              <span class="radar-live-badge">Live</span>
             </div>
 
-            <div class="radar-readout">
-              <div class="readout-header">
-                <span class="readout-code" id="readout-power-code">Scan / PWR-01</span>
-                <span class="readout-live-tag">Live</span>
+            <!-- SVG 5-Axis Spider Chart -->
+            <div class="radar-svg-stage">
+              <svg id="radar-svg" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+                <!-- Concentric Grid Polygons -->
+                <polygon id="radar-grid-1" points="" style="fill:none; stroke:rgba(237,237,240,0.08); stroke-width:1;"></polygon>
+                <polygon id="radar-grid-2" points="" style="fill:none; stroke:rgba(237,237,240,0.08); stroke-width:1;"></polygon>
+                <polygon id="radar-grid-3" points="" style="fill:none; stroke:rgba(237,237,240,0.08); stroke-width:1;"></polygon>
+                <polygon id="radar-grid-4" points="" style="fill:none; stroke:rgba(237,237,240,0.22); stroke-width:1;"></polygon>
+                
+                <!-- Axis Radial Lines & Labels Group -->
+                <g id="radar-axes-group"></g>
+
+                <!-- Active Filled Stats Polygon -->
+                <polygon id="radar-stats-poly" points="" style="fill:rgba(255, 90, 31, 0.16); stroke:#ff5a1f; stroke-width:1.5; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);"></polygon>
+                
+                <!-- Rotating Radar Sweep Line -->
+                <line id="radar-sweep-line" x1="150" y1="150" x2="150" y2="36" style="stroke:rgba(49, 168, 255, 0.45); stroke-width:1.5;"></line>
+              </svg>
+            </div>
+
+            <!-- Tabular Numerical Readouts -->
+            <div class="radar-readouts-grid">
+              <div class="readout-item">
+                <span class="readout-axis">CLA</span>
+                <span class="readout-val" id="stat-val-0">095</span>
               </div>
-              <p class="readout-text" id="readout-power-desc">
-                Marks, type, colour and the rules that keep them consistent long after I leave the room. Complete corporate identities and design systems.
+              <div class="readout-item">
+                <span class="readout-axis">SPE</span>
+                <span class="readout-val" id="stat-val-1">090</span>
+              </div>
+              <div class="readout-item">
+                <span class="readout-axis">SYS</span>
+                <span class="readout-val" id="stat-val-2">094</span>
+              </div>
+              <div class="readout-item">
+                <span class="readout-axis">CRA</span>
+                <span class="readout-val" id="stat-val-3">088</span>
+              </div>
+              <div class="readout-item">
+                <span class="readout-axis">RAN</span>
+                <span class="readout-val" id="stat-val-4">085</span>
+              </div>
+            </div>
+
+            <!-- Bottom Ability Description -->
+            <div class="radar-info-box">
+              <h4 class="radar-info-title" id="radar-info-title">Web Development</h4>
+              <p class="radar-info-desc" id="radar-info-desc">
+                Building responsive and functional web applications using Laravel, PHP, HTML, CSS, JavaScript, and Bootstrap.
               </p>
             </div>
           </div>
@@ -258,96 +318,40 @@
     </section>
 
     <!-- ==========================================================================
-         MISSION FILES SECTION (PROJECTS)
+         MISSION TUNNEL SECTION (510vh 3D WEBGL BENDING TUNNEL)
          ========================================================================== -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title"><span>//</span> Mission files</h2>
-          <span class="section-count">07 records</span>
+    <section class="mission-tunnel-wrap" id="mission-tunnel-section">
+      <div class="mission-tunnel-sticky" id="mission-tunnel-sticky">
+        <!-- 3D Canvas -->
+        <canvas id="mission-tunnel-canvas"></canvas>
+
+        <!-- Top Vignette Gradient -->
+        <div class="tunnel-top-vignette"></div>
+
+        <!-- Section Header Tag -->
+        <div class="tunnel-top-tag">
+          <span class="prefix">//</span>
+          <span>Mission files</span>
+          <span class="count">07 records</span>
         </div>
 
-        <div class="projects-header-info">
-          <span>CLASSIFIED ARCHIVE</span>
-          <span>Hover a file to declassify ↗</span>
-        </div>
+        <!-- Vertical Pagination Ticks on Right -->
+        <div class="tunnel-pagination" id="tunnel-pagination-ticks"></div>
 
-        <div class="projects-list">
-          <!-- Project 01 -->
-          <div class="project-row" data-project="halden-acoustics">
-            <span class="project-file-num">File 01</span>
-            <h3 class="project-name">Halden Acoustics</h3>
-            <span class="project-discipline">Identity, Packaging</span>
-            <span class="project-client">Halden, Oslo</span>
-            <span class="project-year">2026</span>
-            <span class="project-arrow">↗</span>
-          </div>
-
-          <!-- Project 02 -->
-          <div class="project-row" data-project="parallel-archive">
-            <span class="project-file-num">File 02</span>
-            <h3 class="project-name">Parallel Archive</h3>
-            <span class="project-discipline">Website, Art direction</span>
-            <span class="project-client">Parallel, Rotterdam</span>
-            <span class="project-year">2025</span>
-            <span class="project-arrow">↗</span>
-          </div>
-
-          <!-- Project 03 -->
-          <div class="project-row" data-project="nordvik-ceramics">
-            <span class="project-file-num">File 03</span>
-            <h3 class="project-name">Nordvik Ceramics</h3>
-            <span class="project-discipline">Identity, E-commerce</span>
-            <span class="project-client">Nordvik, Bergen</span>
-            <span class="project-year">2025</span>
-            <span class="project-arrow">↗</span>
-          </div>
-
-          <!-- Project 04 -->
-          <div class="project-row" data-project="lumen-line">
-            <span class="project-file-num">File 04</span>
-            <h3 class="project-name">Lumen Line</h3>
-            <span class="project-discipline">Wayfinding, Signage</span>
-            <span class="project-client">Aarhus Light Rail</span>
-            <span class="project-year">2024</span>
-            <span class="project-arrow">↗</span>
-          </div>
-
-          <!-- Project 05 -->
-          <div class="project-row" data-project="osk-audio">
-            <span class="project-file-num">File 05</span>
-            <h3 class="project-name">Osk Audio</h3>
-            <span class="project-discipline">Identity, Launch site</span>
-            <span class="project-client">Osk, Copenhagen</span>
-            <span class="project-year">2024</span>
-            <span class="project-arrow">↗</span>
-          </div>
-
-          <!-- Project 06 -->
-          <div class="project-row" data-project="mork-roasters">
-            <span class="project-file-num">File 06</span>
-            <h3 class="project-name">Mørk Roasters</h3>
-            <span class="project-discipline">Identity, Packaging</span>
-            <span class="project-client">Mørk, Trondheim</span>
-            <span class="project-year">2023</span>
-            <span class="project-arrow">↗</span>
-          </div>
-
-          <!-- Project 07 -->
-          <div class="project-row" data-project="kunsthal-nord">
-            <span class="project-file-num">File 07</span>
-            <h3 class="project-name">Kunsthal Nord</h3>
-            <span class="project-discipline">Wayfinding, Signage</span>
-            <span class="project-client">Kunsthal Nord, Aalborg</span>
-            <span class="project-year">2023</span>
-            <span class="project-arrow">↗</span>
+        <!-- Active Focused Project Details on Bottom Left -->
+        <div class="tunnel-project-overlay">
+          <div class="tunnel-project-number" id="tunnel-project-num">01</div>
+          <a class="tunnel-project-title-link" id="tunnel-project-title" href="#case-study">
+            DIGITAL INFORMATION SYSTEM
+          </a>
+          <div class="tunnel-project-meta">
+            <span id="tunnel-project-discipline">Website Development</span>
+            <span class="tunnel-meta-sep">/</span>
+            <span id="tunnel-project-client">Academic Project / Malang</span>
+            <span class="tunnel-meta-sep">/</span>
+            <span id="tunnel-project-year">2025</span>
           </div>
         </div>
-      </div>
-
-      <!-- Floating Image Preview Element -->
-      <div class="project-floating-preview" id="project-floating-preview">
-        <img src="" alt="Project Preview">
       </div>
     </section>
 
@@ -359,7 +363,7 @@
         <!-- Beacon Bar -->
         <div class="signal-beacon-bar">
           <span class="signal-dot"></span>
-          <span>Signal // Available Q1 2027</span>
+          <span>Signal // Open to Opportunities</span>
         </div>
 
         <!-- Giant Headline -->
@@ -372,39 +376,45 @@
         <div class="signal-content-grid">
           <div>
             <p class="signal-lede">
-              Got a product that’s hard to explain? One email and I’m on it.
+              Available for Web Development, Full-Stack Development, and Software Engineering roles. Let's create impactful digital solutions together.
             </p>
-            <button class="signal-email-btn" data-copy-email="hello@example.com">
-              <span>hello@example.com</span>
-              <span style="color: var(--accent-orange);">[COPY]</span>
-            </button>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="https://www.linkedin.com/in/muhammadirsyaddany/" target="_blank" rel="noopener noreferrer" class="signal-email-btn">
+                <span>LinkedIn Profile</span>
+                <span style="color: var(--accent-orange);">↗</span>
+              </a>
+              <a href="https://irsyaddany-portfolio.pages.dev/" target="_blank" rel="noopener noreferrer" class="signal-email-btn">
+                <span>Live Portfolio</span>
+                <span style="color: var(--accent-orange);">↗</span>
+              </a>
+            </div>
           </div>
 
           <!-- Direct Channels -->
           <div class="social-links">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+            <a href="https://www.linkedin.com/in/muhammadirsyaddany/" target="_blank" rel="noopener noreferrer" class="social-link">
               <span>LinkedIn</span>
+              <span>@muhammadirsyaddany ↗</span>
+            </a>
+            <a href="https://irsyaddany-portfolio.pages.dev/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <span>Cloudflare Pages</span>
+              <span>irsyaddany-portfolio ↗</span>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">
+              <span>GitHub</span>
               <span>↗</span>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link">
-              <span>Instagram</span>
-              <span>↗</span>
-            </a>
-            <a href="https://are.na" target="_blank" rel="noopener noreferrer" class="social-link">
-              <span>Are.na</span>
-              <span>↗</span>
-            </a>
-            <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-link">
-              <span>Dribbble</span>
-              <span>↗</span>
+            <a href="#" data-open-modal="modal-contact" class="social-link">
+              <span>Direct Briefing</span>
+              <span>Open Terminal ↗</span>
             </a>
           </div>
         </div>
 
         <!-- Bottom Metadata -->
         <div class="signal-bottom">
-          <span>© 2026 Yassin Farag. All mission files confidential.</span>
-          <span>55.676° N 12.568° E // COPENHAGEN</span>
+          <span>© 2026 Muhammad Irsyad Dany. All rights reserved.</span>
+          <span>07.984° S 112.621° E // MALANG, INDONESIA</span>
         </div>
       </div>
     </footer>
@@ -420,34 +430,34 @@
       <div style="margin-bottom: 2rem;">
         <span class="mono-tag" id="cs-file-tag">Case file 01</span>
         <h2 id="cs-title" style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 800; text-transform: uppercase; margin-top: 0.5rem; line-height: 1;">
-          Halden Acoustics
+          Digital Information System
         </h2>
         <p id="cs-discipline" style="color: var(--accent-orange); font-family: var(--font-mono); font-size: 0.875rem; margin-top: 0.5rem;">
-          Identity, Packaging
+          Website Development
         </p>
       </div>
 
-      <div style="width: 100%; height: 320px; border-radius: 4px; overflow: hidden; margin-bottom: 2.5rem; border: 1px solid var(--border-subtle);">
+      <div style="width: 100%; height: 320px; border-radius: 4px; overflow: hidden; margin-bottom: 2.5rem; border: 1px solid var(--border-subtle); background: var(--bg-card);">
         <img id="cs-image" src="" alt="Case Study Cover" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
 
       <!-- Metadata Grid -->
       <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); margin-bottom: 2.5rem;">
         <div>
-          <span class="mono-tag" style="display: block; font-size: 0.75rem;">Client</span>
-          <span id="cs-client" style="font-weight: 600; font-size: 0.9375rem;">Halden, Oslo</span>
+          <span class="mono-tag" style="display: block; font-size: 0.75rem;">Client / Context</span>
+          <span id="cs-client" style="font-weight: 600; font-size: 0.9375rem;">Academic Project</span>
         </div>
         <div>
           <span class="mono-tag" style="display: block; font-size: 0.75rem;">Year</span>
-          <span id="cs-year" style="font-weight: 600; font-size: 0.9375rem;">2026</span>
+          <span id="cs-year" style="font-weight: 600; font-size: 0.9375rem;">2025</span>
         </div>
         <div>
           <span class="mono-tag" style="display: block; font-size: 0.75rem;">Role</span>
-          <span id="cs-role" style="font-weight: 600; font-size: 0.9375rem;">Lead Brand</span>
+          <span id="cs-role" style="font-weight: 600; font-size: 0.9375rem;">Lead Developer</span>
         </div>
         <div>
           <span class="mono-tag" style="display: block; font-size: 0.75rem;">Duration</span>
-          <span id="cs-duration" style="font-weight: 600; font-size: 0.9375rem;">14 weeks</span>
+          <span id="cs-duration" style="font-weight: 600; font-size: 0.9375rem;">12 weeks</span>
         </div>
       </div>
 
@@ -459,12 +469,12 @@
         </div>
 
         <div>
-          <span class="mono-tag">// Approach</span>
+          <span class="mono-tag">// Technical Approach</span>
           <p id="cs-approach" style="font-size: 1.0625rem; color: var(--text-secondary); line-height: 1.6; margin-top: 0.5rem;"></p>
         </div>
 
         <div style="background: var(--bg-card); padding: 1.75rem; border-left: 3px solid var(--accent-orange); border-radius: 0 4px 4px 0;">
-          <span class="mono-tag" style="color: var(--accent-orange);">// Debrief / Outcome</span>
+          <span class="mono-tag" style="color: var(--accent-orange);">// Debrief & Outcome</span>
           <p id="cs-debrief" style="font-size: 1.125rem; color: var(--text-primary); font-weight: 600; line-height: 1.5; margin-top: 0.5rem;"></p>
         </div>
       </div>
@@ -478,9 +488,9 @@
     <div class="modal-panel">
       <button class="modal-close-btn" aria-label="Close personnel file">✕</button>
 
-      <span class="mono-tag" style="color: var(--accent-cyan);">// PERSONNEL FILE // CLEARANCE: PUBLIC</span>
+      <span class="mono-tag" style="color: var(--accent-cyan);">// PERSONNEL DOSSIER // CLEARANCE: PUBLIC</span>
       <h2 style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 800; text-transform: uppercase; margin: 0.5rem 0 2rem 0; line-height: 1;">
-        Yassin Farag
+        Muhammad Irsyad Dany
       </h2>
 
       <!-- Interactive Alter Ego Reveal Slider -->
@@ -509,47 +519,40 @@
       <!-- Bio / Dossier -->
       <div style="display: flex; flex-direction: column; gap: 1.5rem; color: var(--text-secondary); line-height: 1.6; font-size: 1rem; margin-bottom: 3rem;">
         <p>
-          I grew up in Cairo, studied graphic design there, and spent eight years in studios in Cairo, Amsterdam and Copenhagen before going independent in 2022.
+          I'm Muhammad Irsyad Dany, a Web Developer and Informatics Engineering graduate from State Polytechnic of Malang, Indonesia. I enjoy transforming ideas and complex requirements into functional, intuitive, and well-structured digital experiences through thoughtful development and problem-solving.
         </p>
         <p>
-          Most of my clients are small teams with one good product and no time to explain it. I work with them directly, usually alone, sometimes with a photographer, developer or copywriter I trust.
+          With experience in front-end mobile development, web development, and system analysis, I've worked on various academic, personal, and professional projects. My journey continues to be driven by curiosity, continuous learning, and a passion for building technology that makes a meaningful impact.
         </p>
-        <p>
-          Outside client work I collect bus timetables and badly translated signs. That is where most of my opinions about wayfinding come from.
+        <p style="color: var(--accent-cyan); font-weight: 500;">
+          "Web developer crafting digital experiences, functional systems, and meaningful solutions through code."
         </p>
       </div>
 
-      <!-- Career Timeline -->
+      <!-- Career & Educational Record -->
       <div style="border-top: 1px solid var(--border-subtle); padding-top: 2rem; margin-bottom: 3rem;">
-        <span class="mono-tag">// Career Record</span>
+        <span class="mono-tag">// Track Record & Education</span>
         <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.5rem;">
           <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
             <div>
-              <h4 style="font-weight: 700; color: var(--text-primary);">Independent Designer</h4>
-              <p style="font-size: 0.875rem; color: var(--text-tertiary);">Self-employed, Copenhagen</p>
+              <h4 style="font-weight: 700; color: var(--text-primary);">Web & Full-Stack Developer</h4>
+              <p style="font-size: 0.875rem; color: var(--text-tertiary);">Independent Practice, Malang</p>
             </div>
-            <span class="mono-tag" style="color: var(--accent-orange);">2022–NOW</span>
+            <span class="mono-tag" style="color: var(--accent-orange);">PRESENT</span>
           </div>
           <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
             <div>
-              <h4 style="font-weight: 700; color: var(--text-primary);">Senior Brand Designer</h4>
-              <p style="font-size: 0.875rem; color: var(--text-tertiary);">Studio Kvist, Copenhagen</p>
+              <h4 style="font-weight: 700; color: var(--text-primary);">Mobile & Front-End Developer Intern</h4>
+              <p style="font-size: 0.875rem; color: var(--text-tertiary);">UTERO Indonesia</p>
             </div>
-            <span class="mono-tag">2019–2022</span>
+            <span class="mono-tag">2025</span>
           </div>
           <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
             <div>
-              <h4 style="font-weight: 700; color: var(--text-primary);">Brand & Interface Designer</h4>
-              <p style="font-size: 0.875rem; color: var(--text-tertiary);">Mono Haus, Amsterdam</p>
+              <h4 style="font-weight: 700; color: var(--text-primary);">Informatics Engineering Graduate</h4>
+              <p style="font-size: 0.875rem; color: var(--text-tertiary);">State Polytechnic of Malang (Polinema)</p>
             </div>
-            <span class="mono-tag">2016–2019</span>
-          </div>
-          <div style="display: flex; justify-content: space-between;">
-            <div>
-              <h4 style="font-weight: 700; color: var(--text-primary);">Junior Designer</h4>
-              <p style="font-size: 0.875rem; color: var(--text-tertiary);">Atelier Sahn, Cairo</p>
-            </div>
-            <span class="mono-tag">2014–2016</span>
+            <span class="mono-tag">ACADEMIC</span>
           </div>
         </div>
       </div>
@@ -568,39 +571,34 @@
         Open a file
       </h2>
       <p style="color: var(--text-secondary); font-size: 0.9375rem; margin-bottom: 2rem;">
-        Tell me about the product that’s hard to explain. A few lines are enough. Every brief gets a personal reply within 2 working days.
+        Available for full-time opportunities, collaborations, and contract projects. Leave a message below or connect directly via LinkedIn.
       </p>
 
       <form id="mission-contact-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
         <div>
           <label class="mono-tag" style="display: block; margin-bottom: 0.5rem;">01 / YOUR NAME *</label>
-          <input type="text" required placeholder="Alex Mercer" style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem;">
+          <input type="text" required placeholder="Hiring Manager / Founder" style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem;">
         </div>
 
         <div>
           <label class="mono-tag" style="display: block; margin-bottom: 0.5rem;">02 / DIRECT EMAIL *</label>
-          <input type="email" required placeholder="alex@company.com" style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem;">
+          <input type="email" required placeholder="contact@company.com" style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem;">
         </div>
 
         <div>
-          <label class="mono-tag" style="display: block; margin-bottom: 0.5rem;">03 / COMPANY OR PROJECT</label>
-          <input type="text" placeholder="Acoustic Labs Inc." style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem;">
-        </div>
-
-        <div>
-          <label class="mono-tag" style="display: block; margin-bottom: 0.5rem;">04 / WHAT NEEDS SOLVING</label>
+          <label class="mono-tag" style="display: block; margin-bottom: 0.5rem;">03 / ROLE OR PROJECT TYPE</label>
           <select style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem;">
-            <option value="identity">Complete Identity System</option>
-            <option value="website">Custom Website & Digital Experience</option>
-            <option value="wayfinding">Wayfinding & Spatial Signage</option>
-            <option value="art-direction">Art Direction & Launch Campaign</option>
-            <option value="other">Multiple / Full Retainer</option>
+            <option value="full-stack">Full-Stack Development Role</option>
+            <option value="web-dev">Web Application Development (Laravel/PHP/JS)</option>
+            <option value="backend">Backend & Database Architecture</option>
+            <option value="mobile">Mobile Front-End Development</option>
+            <option value="contract">Project Contract / Freelance</option>
           </select>
         </div>
 
         <div>
-          <label class="mono-tag" style="display: block; margin-bottom: 0.5rem;">05 / THE BRIEF *</label>
-          <textarea rows="4" required placeholder="Describe your product, timeline, and current problem..." style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem; resize: vertical;"></textarea>
+          <label class="mono-tag" style="display: block; margin-bottom: 0.5rem;">04 / THE BRIEF / MESSAGE *</label>
+          <textarea rows="4" required placeholder="Tell me about the role, project goals, timeline, and tech stack requirements..." style="width: 100%; padding: 0.875rem 1rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: 4px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9375rem; resize: vertical;"></textarea>
         </div>
 
         <button type="submit" style="padding: 1.125rem; background: var(--accent-orange); color: #fff; font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 4px; transition: background 0.2s ease; margin-top: 1rem;">
@@ -608,16 +606,16 @@
         </button>
 
         <div id="form-status-notice" class="mono-tag" style="text-align: center; margin-top: 0.5rem; font-size: 0.75rem;">
-          CHANNEL ENCRYPTED // 256-BIT DISPATCH
+          MALANG, ID // CHANNEL ENCRYPTED
         </div>
       </form>
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- Scripts: Three.js, Hero Shader, 3D Mission Tunnel Shader, and Main Interactive Logic -->
   <script src="assets/js/three.min.js"></script>
   <script src="assets/js/hero-shader.js"></script>
+  <script src="assets/js/tunnel-shader.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
